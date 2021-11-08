@@ -67,8 +67,11 @@ reset.addEventListener('click',()=>{
     let boxtext = document.querySelectorAll(".boxtext");
     Array.from(boxtext).forEach(e =>{
         e.innerText = ""
+    });
+        turn = "X"
+        isgameover = false
+        document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
         document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width = "0px"
         audioTurn.play()
-        document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-    });
+        music.pause()
 });
